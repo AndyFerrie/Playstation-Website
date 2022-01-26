@@ -147,7 +147,9 @@ nav .button {
 	font-size: 0.875rem;
 }
 
-
+#menuDropdown, #searchDropdown {
+	display: none;
+}
 
 
 
