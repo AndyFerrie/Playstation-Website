@@ -147,10 +147,48 @@ nav .button {
 	font-size: 0.875rem;
 }
 
-#menuDropdown, #searchDropdown {
-	display: none;
+.menuDropdown, .searchDropdown {
+    top: -60px;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    transition: all 0.5s linear;
 }
 
+.show {
+    top: 0px;
+}
+
+.searchDropdown .top {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 14px;
+}
+
+.searchDropdown i {
+    padding: 7.5px;
+}
+
+.searchDropdown button {
+    all: unset;
+    cursor: pointer;
+}
+
+.searchDropdown .fa-chevron-left {
+    padding: 12px;
+}
+
+.searchDropdown .fa-search {
+    background-color: #F5F5F5;
+}
+
+.searchDropdown input[type=text] {
+    padding: 6px;
+    font-size: 16px;
+    border: none;
+    background-color: #F5F5F5;
+  }
 
 
 
