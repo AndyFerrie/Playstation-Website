@@ -1,3 +1,20 @@
+@font-face {
+    font-family: 'sst';
+    src: url(./Fonts/sst-cufonfonts/SSTRg.TTF);
+}
+
+@font-face {
+    font-family: 'sst light';
+    src: url(./Fonts/sst-cufonfonts/SSTLight.TTF);
+}
+
+@font-face {
+    font-family: 'mont heavy';
+    font-weight: 800;
+    src: url(./Fonts/mont/Mont-HeavyDEMO.otf);
+}
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -47,3 +64,130 @@ table {
 	border-spacing: 0;
 }
 
+/* Global Styles */
+
+html {
+	font-family: 'SST', sans-serif;
+	font-size: 16px;
+}
+
+.image-container {
+    overflow: hidden;
+}
+
+video:focus {
+    outline: none;
+}
+
+video {
+    outline: none;
+    width: 100%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.button {
+    background-color: #0072ce;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 10px 32px;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: white;
+    color: #0072ce;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Navigation */
+
+nav .mobile {
+	display: flex;
+	height: 60px;
+	justify-content: space-between;
+	z-index: 1;
+	align-items: center;
+}
+
+nav button.menu {
+	background-image: url('./Images/Icons/Hamburger.png');
+	background-size: cover;
+	height: 60px;
+	width: 48px;
+	border: none;
+}
+
+nav button.menu:focus {
+	box-shadow: inset 0px 0px 5px 1px #0072ce;
+}
+
+nav button.search {
+	background-image: url('./Images/Icons/SearchIcon.png');
+	background-size: cover;
+	height: 60px;
+	width: 48px;
+	border: none;
+}
+
+nav .logo {
+	justify-self: center;
+	height: 60px;
+}
+
+nav .button {
+	color: white;
+	background-color: black;
+	margin: 10px;
+	padding: 10px 24px;
+	font-size: 0.875rem;
+}
+
+
+
+
+
+
+
+/* Footer */
+
+footer {
+    background-color: #00439c;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+}
+
+footer .content {
+    padding: 3%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer img {
+    width: 15%;
+}
+
+footer small {
+    width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    footer img {
+        width: 25%;
+    }
+    footer small {
+        width: 70%
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    footer {
+        font-size: 0.75rem;
+    }
+}
