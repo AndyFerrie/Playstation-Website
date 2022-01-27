@@ -38,6 +38,7 @@ document.getElementById("searchDropBtn").addEventListener("click", overlay);
 
 document.getElementById("searchBackBtn").addEventListener("click", searchDropdown);
 document.getElementById("searchBackBtn").addEventListener("click", overlay);
+document.getElementById("searchBackBtn").addEventListener("click", siteDropdown);
 
 document.getElementById("siteDropBtn").addEventListener("click", siteDropdown);
 
