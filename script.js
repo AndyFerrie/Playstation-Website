@@ -35,7 +35,6 @@ function siteFocusStore() {
 }
 
 document.getElementById("menuDropBtn").addEventListener("click", menuDropdown);
-document.getElementById("menuDropBtn").addEventListener("click", overlay);
 
 document.getElementById("searchDropBtn").addEventListener("click", searchDropdown);
 document.getElementById("searchDropBtn").addEventListener("click", overlay);
@@ -53,3 +52,7 @@ document.getElementById("playStationCom").addEventListener("click", siteFocusCom
 
 document.getElementById("playStationStore").addEventListener("click", siteDropdown);
 document.getElementById("playStationStore").addEventListener("click", siteFocusStore);
+
+document.getElementById("overlay").addEventListener("click", overlay);
+document.getElementById("overlay").addEventListener("click", searchDropdown);
+document.getElementById("overlay").addEventListener("click", siteDropdownOff);
