@@ -120,14 +120,12 @@ nav button.menu {
 	height: 60px;
 	width: 48px;
 	border: none;
+    cursor: pointer;
 }
 
 #menuDropBtn:focus, #searchDropBtn:focus, #searchBackBtn:focus, #siteDropBtn:focus, #siteBackBtn:focus {
 	box-shadow: inset 0px 0px 5px 1px #0072ce;
 }
-
-
-
 
 nav button.search {
 	background-image: url('./Images/Icons/SearchIcon.png');
@@ -135,6 +133,7 @@ nav button.search {
 	height: 60px;
 	width: 48px;
 	border: none;
+    cursor: pointer;
 }
 
 nav .logo {
@@ -148,6 +147,11 @@ nav .button {
 	margin: 10px;
 	padding: 10px 24px;
 	font-size: 0.875rem;
+}
+
+nav .button:hover {
+    background-color: #606060;
+    color: white;
 }
 
 .overlay {
