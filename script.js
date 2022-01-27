@@ -18,6 +18,10 @@ function siteDropdown() {
     document.getElementById("siteDropdown").classList.toggle('display');
 }
 
+function siteDropdownOff() {
+    document.getElementById("siteDropdown").classList.remove('display');
+}
+
 function siteFocusCom() {
     document.getElementById("playStationCom").classList.toggle('focus');
     document.getElementById("playStationStore").classList.remove('focus');
@@ -38,7 +42,7 @@ document.getElementById("searchDropBtn").addEventListener("click", overlay);
 
 document.getElementById("searchBackBtn").addEventListener("click", searchDropdown);
 document.getElementById("searchBackBtn").addEventListener("click", overlay);
-document.getElementById("searchBackBtn").addEventListener("click", siteDropdown);
+document.getElementById("searchBackBtn").addEventListener("click", siteDropdownOff);
 
 document.getElementById("siteDropBtn").addEventListener("click", siteDropdown);
 
