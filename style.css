@@ -175,7 +175,7 @@ nav .button:hover {
     position: absolute;
     width: 100%;
     z-index: 2;
-    transition: all 0.2s linear;
+    transition: all 0.3s ease;
 }
 
 /* .show linked to JS */
