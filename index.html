@@ -18,27 +18,34 @@
             <div class="mobile">
 
                 <div class="icons">
-                    <button class="menu dropbtn" onclick="menuDropdown()"></button>
-                    <button class="search dropbtn" onclick="searchDropdown()"></button>
+                    <button id="menuDropBtn" class="menu dropbtn"></button>
+                    <button id="searchDropBtn" class="search dropbtn"></button>
                 </div>
                 <a href="#">
                     <img class="logo" src="./Images/Icons/PSHeaderLogo.png" alt="Playstation Logo">
                 </a>
                 <a class=button href="#">Sign In</a>
 
+                <div id="overlay" class="overlay"></div>
+
                 <div class="menuDropdown dropdown-content" id=menuDropdown></div>
 
                 <div class="searchDropdown dropdown-content" id=searchDropdown>
 
                     <div class="top">
-                        <button onclick="searchDropdown()"><i class="fas fa-chevron-left"></i></button>
+                        <button id="searchBackBtn"><i class="fas fa-chevron-left"></i></button>
                         <form action="#">
-                            <button type="submit"><i class="fa fa-search"></i></button><input type="text" placeholder="Search PlayStation.com">
+                            <button type="submit"><i class="fa fa-search"></i></button><input id="searchField" type="text" placeholder="Search PlayStation.com">
                         </form>
                     </div>
 
                     <div class="bottom">
-
+                        <button id="siteDropBtn">PlayStation.com<i class="fas fa-chevron-down" style="padding: 2px 0px 0px 15px"></i></button>
+                        <div id="siteDropdown" class="siteDropdown">
+                            <a id="siteBackBtn" href="#">Sites<i class="fas fa-chevron-down" style="padding: 2px 0px 0px 78px"></i></a>
+                            <a id="playStationCom" href="#">PlayStation.com</a>
+                            <a id="playStationStore" href="#">Playstation Store</a>
+                        </div>
                     </div>
                 </div>
                 

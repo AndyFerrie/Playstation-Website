@@ -122,9 +122,12 @@ nav button.menu {
 	border: none;
 }
 
-nav button.menu:focus {
+#menuDropBtn:focus, #searchDropBtn:focus, #searchBackBtn:focus, #siteDropBtn:focus, #siteBackBtn:focus {
 	box-shadow: inset 0px 0px 5px 1px #0072ce;
 }
+
+
+
 
 nav button.search {
 	background-image: url('./Images/Icons/SearchIcon.png');
@@ -147,13 +150,31 @@ nav .button {
 	font-size: 0.875rem;
 }
 
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(0,rgba(0,0,0,0.5) 0,rgba(0,0,0,0.8) 43.07%,black 100%);
+}
+
+/* switches overlay on/off */
+
+.onoff {
+    display: block;
+}
+
 .menuDropdown, .searchDropdown {
-    top: -60px;
+    top: -120px;
     position: absolute;
     width: 100%;
     z-index: 2;
-    transition: all 0.5s linear;
+    transition: all 0.2s linear;
 }
+
+/* .show linked to JS */
 
 .show {
     top: 0px;
@@ -190,6 +211,55 @@ nav .button {
     background-color: #F5F5F5;
   }
 
+.searchDropdown .bottom {
+    background-color: white;
+}
+
+#siteDropBtn {
+    padding: 12px;
+    width: 140px;
+    margin-left: 48px;
+    font-size: 0.75rem;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.siteDropdown {
+    display: none;
+    margin-top: -38px;
+    position: absolute;
+    background-color: white;
+    width: 140px;
+    margin-left: 48px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+}
+
+.siteDropdown a {
+    float: none;
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 0.75rem;
+}
+
+/* .focus linked to JS */
+
+#playStationCom:focus, #playStationStore:focus, .siteDropdown .focus {
+    color: white;
+    background-color: #0172ce;
+    box-shadow: inset 0px 0px 3px 1px white;
+}
+
+button#siteDropdown i.fa-chevron-down {
+    padding: 0px 0px 0px 5px;
+}
+
+/* .display linked to JS */
+.display {
+    display: block;
+}
 
 
 
