@@ -3,7 +3,7 @@
 toggle between hiding and showing the dropdown content */
 
 function menuDropdown() {
-    document.getElementById("menuDropdown").classList.toggle('show');
+    document.getElementById("menuDropdown").classList.toggle('display');
 }
 
 function searchDropdown() {
@@ -56,3 +56,5 @@ document.getElementById("playStationStore").addEventListener("click", siteFocusS
 document.getElementById("overlay").addEventListener("click", overlay);
 document.getElementById("overlay").addEventListener("click", searchDropdown);
 document.getElementById("overlay").addEventListener("click", siteDropdownOff);
+
+

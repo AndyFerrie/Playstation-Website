@@ -14,7 +14,6 @@
     src: url(./Fonts/mont/Mont-HeavyDEMO.otf);
 }
 
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -71,6 +70,10 @@ html {
 	font-size: 16px;
 }
 
+body { 
+    overflow: hidden;
+} 
+
 .image-container {
     overflow: hidden;
 }
@@ -110,7 +113,7 @@ nav .mobile {
 	display: flex;
 	height: 60px;
 	justify-content: space-between;
-	z-index: 1;
+	z-index: 5;
 	align-items: center;
 }
 
@@ -158,7 +161,7 @@ nav .button:hover {
     display: none;
     position: absolute;
     top: 0;
-    z-index: 1;
+    z-index: 3;
     height: 100vh;
     width: 100vw;
     background: linear-gradient(0,rgba(0,0,0,0.5) 0,rgba(0,0,0,0.8) 43.07%,black 100%);
@@ -170,12 +173,22 @@ nav .button:hover {
     display: block;
 }
 
-.menuDropdown, .searchDropdown {
+.searchDropdown {
     top: -120px;
     position: absolute;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
     transition: all 0.3s ease;
+}
+
+.menuDropdown {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    top: 60px;
+    box-shadow: inset 0 10px 5px -5px #cecece;
 }
 
 /* .show linked to JS */
@@ -183,6 +196,55 @@ nav .button:hover {
 .show {
     top: 0px;
 }
+
+/* Main Menu Dropdown */
+
+.menuDropdown menu {
+    margin-top: 36px;
+}
+
+.menuDropdown li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menuDropdown img {
+    height: 46px;
+    margin-right: 16px;
+}
+
+.menuDropdown i {
+    margin: 0px 20px 0px auto;
+}
+
+/* Side Menus */
+
+.sidemenu {
+    position: absolute;
+    top: 60px;
+    z-index: 2;
+    width: calc(100vw - 68.75px)
+}
+
+.sidemenu menu {
+    list-style-type: none;  
+}
+
+#gamesMenu, #hardwareMenu, #servicesMenu, #newsMenu, #shopMenu, #supportMenu {
+    position: absolute;
+    right: -110vw;
+    background-color: white;
+    width: calc(100vw - 68.75px);
+    box-shadow: inset 0 10px 5px -5px #cecece, 0px 12px 10px 5px #cecece;
+}
+
+#gamesMenu {
+    height: 100vh;
+    right: -68.75px;
+}
+
+/* Search Dropdown */
 
 .searchDropdown .top {
     display: flex;
