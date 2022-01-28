@@ -231,17 +231,68 @@ nav .button:hover {
     list-style-type: none;  
 }
 
+.sidemenu i {
+    transform: rotate(90deg);
+    margin-right: 16px;
+}
+
+.sidemenu .title {
+    margin: 40px 20px;
+}
+
+.sidemenu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sidemenu img {
+    height: 100px;
+    margin: 0px 30px 20px;
+    cursor: pointer;
+}
+
+.sidemenu hr {
+    width: 85%;
+    height: 1px;
+    border: none;
+    background-color: #cecece;
+}
+
+.sidemenu .bottom {
+    width: 100%;
+}
+
+.sidemenu a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    line-height: 2;
+    font-size: 0.875rem;
+}
+
 #gamesMenu, #hardwareMenu, #servicesMenu, #newsMenu, #shopMenu, #supportMenu {
     position: absolute;
-    right: -110vw;
     background-color: white;
     width: calc(100vw - 68.75px);
     box-shadow: inset 0 10px 5px -5px #cecece, 0px 12px 10px 5px #cecece;
 }
 
+.gamesMenu, .hardwareMenu, .servicesMenu, .newsMenu, .shopMenu, .supportMenu {
+    right: -110vw;
+    transition: all 0.5s ease;
+}
+
+.slidein {
+    right: -68.75px;
+}
+
 #gamesMenu {
     height: 100vh;
-    right: -68.75px;
+}
+
+.gamesMenu .title {
+    cursor: pointer;
 }
 
 /* Search Dropdown */

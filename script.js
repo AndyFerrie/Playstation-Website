@@ -6,6 +6,14 @@ function menuDropdown() {
     document.getElementById("menuDropdown").classList.toggle('display');
 }
 
+function gamesSideMenu() {
+    document.getElementById("gamesMenu").classList.toggle('slidein');
+}
+
+function gamesSideMenuOff() {
+    document.getElementById("gamesMenu").classList.remove('slidein');
+}
+
 function searchDropdown() {
     document.getElementById("searchDropdown").classList.toggle('show');
 }
@@ -35,6 +43,11 @@ function siteFocusStore() {
 }
 
 document.getElementById("menuDropBtn").addEventListener("click", menuDropdown);
+document.getElementById("menuDropBtn").addEventListener("click", gamesSideMenuOff)
+
+document.getElementById("games").addEventListener("click", gamesSideMenu);
+
+document.getElementById("gamesMenuTitle").addEventListener("click", gamesSideMenuOff);
 
 document.getElementById("searchDropBtn").addEventListener("click", searchDropdown);
 document.getElementById("searchDropBtn").addEventListener("click", overlay);
