@@ -3,31 +3,42 @@ function menuDropdown() {
 }
 
 function gamesSideMenu() {
+    SideMenusOff();
     document.getElementById("gamesMenu").classList.toggle('slidein');
 }
 
 function hardwareSideMenu() {
+    SideMenusOff();
     document.getElementById("hardwareMenu").classList.toggle('slidein');
 }
 
 function servicesSideMenu() {
+    SideMenusOff();
     document.getElementById("servicesMenu").classList.toggle('slidein');
 }
 
 function newsSideMenu() {
+    SideMenusOff();
     document.getElementById("newsMenu").classList.toggle('slidein');
 }
 
 function shopSideMenu() {
+    SideMenusOff();
     document.getElementById("shopMenu").classList.toggle('slidein');
 }
 
 function supportSideMenu() {
+    SideMenusOff();
     document.getElementById("supportMenu").classList.toggle('slidein');
 }
 
-function gamesSideMenuOff() {
+function SideMenusOff() {
     document.getElementById("gamesMenu").classList.remove('slidein');
+    document.getElementById("hardwareMenu").classList.remove('slidein');
+    document.getElementById("servicesMenu").classList.remove('slidein');
+    document.getElementById("newsMenu").classList.remove('slidein');
+    document.getElementById("shopMenu").classList.remove('slidein');
+    document.getElementById("supportMenu").classList.remove('slidein');
 }
 
 function searchDropdown() {
@@ -59,21 +70,21 @@ function siteFocusStore() {
 }
 
 document.getElementById("menuDropBtn").addEventListener("click", menuDropdown);
-document.getElementById("menuDropBtn").addEventListener("click", gamesSideMenuOff)
+document.getElementById("menuDropBtn").addEventListener("click", SideMenusOff)
 
 document.getElementById("games").addEventListener("click", gamesSideMenu);
-
 document.getElementById("hardware").addEventListener("click", hardwareSideMenu);
-
 document.getElementById("services").addEventListener("click", servicesSideMenu);
-
 document.getElementById("news").addEventListener("click", newsSideMenu);
-
 document.getElementById("shop").addEventListener("click", shopSideMenu);
-
 document.getElementById("support").addEventListener("click", supportSideMenu);
 
-document.getElementById("gamesMenuTitle").addEventListener("click", gamesSideMenuOff);
+document.getElementById("gamesMenuTitle").addEventListener("click", SideMenusOff);
+document.getElementById("hardwareMenuTitle").addEventListener("click", SideMenusOff);
+document.getElementById("servicesMenuTitle").addEventListener("click", SideMenusOff);
+document.getElementById("newsMenuTitle").addEventListener("click", SideMenusOff);
+document.getElementById("shopMenuTitle").addEventListener("click", SideMenusOff);
+document.getElementById("supportMenuTitle").addEventListener("click", SideMenusOff);
 
 document.getElementById("searchDropBtn").addEventListener("click", searchDropdown);
 document.getElementById("searchDropBtn").addEventListener("click", overlay);
