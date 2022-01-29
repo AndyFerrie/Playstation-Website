@@ -1,5 +1,6 @@
 function menuDropdown() {
     document.getElementById("menuDropdown").classList.toggle('display');
+    document.getElementById("menuDropBtn").classList.toggle('cross');
 }
 
 function gamesSideMenu() {

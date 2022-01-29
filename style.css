@@ -129,6 +129,10 @@ nav button.menu {
     cursor: pointer;
 }
 
+nav button.menu.cross {
+    background-image: url(./Images/Icons/HamburgerCross.png);
+}
+
 #menuDropBtn:focus, #searchDropBtn:focus, #searchBackBtn:focus, #siteDropBtn:focus, #siteBackBtn:focus {
 	box-shadow: inset 0px 0px 5px 1px #0072ce;
 }
