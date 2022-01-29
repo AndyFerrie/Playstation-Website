@@ -115,6 +115,9 @@ nav .mobile {
 	justify-content: space-between;
 	z-index: 5;
 	align-items: center;
+    position: fixed;
+    background-color: white;
+    width: 100%;
 }
 
 nav button.menu {
@@ -224,7 +227,7 @@ nav .button:hover {
     position: absolute;
     top: 60px;
     z-index: 2;
-    width: calc(100vw - 68.75px)
+    width: calc(100vw - 68.75px);
 }
 
 .sidemenu menu {
@@ -275,7 +278,7 @@ nav .button:hover {
     position: absolute;
     background-color: white;
     width: calc(100vw - 68.75px);
-    box-shadow: inset 0 10px 5px -5px #cecece, 0px 12px 10px 5px #cecece;
+    box-shadow: inset 0 10px 5px -5px #cecece, -10px 5px 8px 0px #cecece;
     height: 100vh;
 }
 
