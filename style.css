@@ -223,6 +223,10 @@ nav .button:hover {
     display: none;
 }
 
+.menuDropdown img.iconActive.display {
+    display: block;
+}
+
 .menuDropdown i {
     margin: 0px 20px 0px auto;
 }
@@ -234,6 +238,7 @@ nav .button:hover {
     top: 60px;
     z-index: 2;
     width: calc(100vw - 68.75px);
+    background-color: white;
 }
 
 .sidemenu menu {
