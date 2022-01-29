@@ -212,6 +212,10 @@ nav .button:hover {
     cursor: pointer;
 }
 
+.menuDropdown li:hover {
+    color:#0172ce;
+}
+
 .menuDropdown img {
     height: 46px;
     margin-right: 16px;
@@ -253,6 +257,11 @@ nav .button:hover {
 .sidemenu .title {
     margin: 20px 10px;
     padding: 20px 10px;
+    cursor: pointer;
+}
+
+.sidemenu .title:hover {
+    color: #0172ce;
 }
 
 .sidemenu ul {
@@ -269,6 +278,10 @@ nav .button:hover {
 
 .sidemenu img.slimImage {
     padding: 0px 19px;
+}
+
+.sidemenu img:hover {
+    box-shadow: 0px 0px 10px 1px #cecece;
 }
 
 .sidemenu hr {
@@ -290,6 +303,10 @@ nav .button:hover {
     font-size: 0.875rem;
 }
 
+.sidemenu a:hover {
+    color:#0172ce;
+}
+
 #gamesMenu, #hardwareMenu, #servicesMenu, #newsMenu, #shopMenu, #supportMenu {
     position: absolute;
     background-color: white;
@@ -307,10 +324,6 @@ nav .button:hover {
     right: -68.75px;
 }
 
-.gamesMenu .title, .hardwareMenu .title, .servicesMenu .title, .newsMenu .title, .shopMenu .title, .supportMenu .title{
-    cursor: pointer;
-}
-
 /* Search Dropdown */
 
 .searchDropdown .top {
@@ -320,13 +333,25 @@ nav .button:hover {
     padding: 14px;
 }
 
+.searchDropdown a:hover {
+    color: #0172ce;
+}
+
 .searchDropdown i {
     padding: 7.5px;
+}
+
+.searchDropdown i:hover {
+    color: #0172ce;
 }
 
 .searchDropdown button {
     all: unset;
     cursor: pointer;
+}
+
+.searchDropdown button:hover {
+    color: #0172ce;
 }
 
 .searchDropdown .fa-chevron-left {
