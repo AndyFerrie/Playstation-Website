@@ -483,6 +483,12 @@ section.hero .carousel-cell .description {
     transition: all 1.5s ease-out;
 }
 
+section.hero .carousel-cell .description::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 /* animation */
 
 section.hero .carousel-cell.is-selected .description {
@@ -576,12 +582,13 @@ section.hero .carousel-main .carousel-cell p {
 
 section.hero .carousel-nav {
     background-color: #FFF;
-    height: 70%;
+    position: relative;
+    overflow: auto;
 }
     
 section.hero .carousel-nav .carousel-cell {
     width: 50%;
-    padding: 10% 2% 10%;
+    padding: 5% 2% 5%;
     background-color: #FFF;
   }
 
@@ -596,7 +603,11 @@ section.hero .carousel-nav .carousel-cell.is-nav-selected img {
     outline-offset: 3px;
 }
 
+/* Section 2 This Month on Playstation */
 
+section.thismonth {
+    position: relative;
+}
 
 
 
