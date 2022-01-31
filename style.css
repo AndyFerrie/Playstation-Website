@@ -445,7 +445,7 @@ button#siteDropdown i.fa-chevron-down {
 
 section.hero {
     top: 60px;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     position: relative;
     background-color: #1f1f1f;
@@ -493,12 +493,25 @@ section.hero .carousel-cell.is-selected .description {
 section.hero .carousel-main .carousel-cell img {
     height: 100vw;
     opacity: 0;
-    transition: all 2s ease-in;
+    transition: all 1s ease-in;
 }
 
 section.hero .carousel-main .carousel-cell.is-selected img {
     opacity: 1;
 }
+
+section.hero .carousel-main .carousel-cell video {
+    height: 100vw;
+    object-fit: cover;
+    margin-bottom: -1%;
+    opacity: 0;
+    transition: all 1s ease-in;
+}
+
+section.hero .carousel-main .carousel-cell.is-selected video {
+    opacity: 1;
+}
+
 
 section.hero .carousel-cell.endofyear {
     background-color: #003a9c;
@@ -559,12 +572,6 @@ section.hero .carousel-main .carousel-cell p {
     width: 85%;
     text-align: center;
     font-size: 15px;
-}
-
-section.hero .carousel-main .carousel-cell video {
-    height: 100vw;
-    object-fit: cover;
-    margin-bottom: -1%;
 }
 
 section.hero .carousel-nav {
