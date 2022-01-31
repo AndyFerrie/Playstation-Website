@@ -9,9 +9,7 @@ https://flickity.metafizzy.co
 .flickity-enabled:focus { outline: none; }
 
 .flickity-viewport {
-  overflow: hidden;
-  position: relative;
-  height: 100vh;
+  height: 100%;
 }
 
 .flickity-slider {
@@ -78,6 +76,7 @@ https://flickity.metafizzy.co
 /* ---- previous/next buttons ---- */
 
 .flickity-prev-next-button {
+  display: none;
   top: 50%;
   width: 44px;
   height: 44px;
@@ -109,7 +108,7 @@ https://flickity.metafizzy.co
 /* ---- page dots ---- */
 
 .flickity-page-dots {
-  position: absolute;
+  display: none;
   width: 100%;
   bottom: -25px;
   padding: 0;

@@ -7,8 +7,10 @@
     <title>PlayStation® Official Site: Consoles, Games, Accessories &amp; More</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./Flickity/flickity.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
     <script src="https://kit.fontawesome.com/7666c259de.js" crossorigin="anonymous"></script>
     <script src="./Flickity/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
 </head>
 <body>
     <header>
@@ -179,15 +181,19 @@
 
     <section class="hero">
 
-        <div class="carousel carousel-main" data-flickity>
+        <div class="carousel carousel-main" data-flickity='{ "cellAlign": "center", "contain": false, "imagesLoaded": true, "wrapAround": true, "fade": true}'>
 
             <div class="carousel-cell uncharted">
-                <img src="./Images/hero-mob-800px-uncharted-legacy-of-thieves.jpg" alt="">
+                <div class="image-container">
+                    <img src="./Images/hero-mob-800px-uncharted-legacy-of-thieves.jpg" alt="">
+                    <div class="imageOverlay"></div>
+                </div>
+                
                 <div class="description">
-                    <img src="./Images/herologo-uncharted-legacy-of-thieves-white-logo-01-26nov21en_003.png" alt="">
+                    <img class="logo" src="./Images/herologo-uncharted-legacy-of-thieves-white-logo-01-26nov21en_003.png" alt="">
                     <h3>Are you ready to seek your fortune?</h3>
                     <p>Play as Nathan Drake and Chloe Frazer in their own standalone adventures, available January 28, 2022, on PS5.</p>
-                    <a href="#" class="button">Find out more</a>
+                    <a href="#" class="button white">Find out more</a>
                 </div>
             </div>
 
@@ -196,52 +202,68 @@
                 <div class="description">
                     <h3>Your PlayStation 2021 Wrap-Up</h3>
                     <p>Explore your personalised play stats for the last year and discover your most played games.</p>
-                    <a href="#" class="button">Find out more</a>
+                    <a href="#" class="button white">Find out more</a>
                 </div>
             </div>
 
             <div class="carousel-cell dualsense">
-                <video src="./Videos/dualsense-range-homepage-hero-video-mobile-01-en-07dec21.mp4" autoplay muted loop></video>
+                <div class="image-container">
+                    <video src="./Videos/dualsense-range-homepage-hero-video-mobile-01-en-07dec21.mp4" autoplay muted loop></video>
+                    <div class="imageOverlay"></div>
+                </div>
+                
                 <div class="description">
                     <h3>Galaxy Collection has landed</h3>
                     <p>Starlight Blue, Galactic Purple and Nova Pink DualSense™ wireless controllers are now available alongside Midnight Black and Cosmic Red.</p>
-                    <a href="#" class="button">Shop colours</a>
+                    <a href="#" class="button orange">Shop colours</a>
                 </div>
             </div>
 
             <div class="carousel-cell GT7">
-                <img src="./Images/hero-mob-800px-gran-turismo-7-hero.jpg" alt="">
+                <div class="image-container">
+                    <img src="./Images/hero-mob-800px-gran-turismo-7-hero.jpg" alt="">
+                    <div class="imageOverlay"></div>
+                </div>
+                
                 <div class="description">
-                    <img src="./Images/herologo-gran-turismo-7-logo-01-en-05aug21_003.png" alt="">
+                    <img class="logo" src="./Images/herologo-gran-turismo-7-logo-01-en-05aug21_003.png" alt="">
                     <h3>Available March 4, 2022</h3>
                     <p>Gran Turismo 7 builds on generations of racing sim experience to bring you the best features from the history of the franchise.</p>
-                    <a href="#" class="button">Pre-order now</a>
+                    <a href="#" class="button orange">Pre-order now</a>
                 </div>
             </div>
 
             <div class="carousel-cell elderscrolls">
-                <img src="./Images/hero-mob-the-elder-scrolls-online-high-isle.jpg" alt="">
+                <div class="image-container">
+                    <img src="./Images/hero-mob-the-elder-scrolls-online-high-isle.jpg" alt="">
+                    <div class="imageOverlay"></div>
+                </div>
+                
                 <div class="description">
-                    <img src="./Images/herologo-the-elder-scrolls-online-high-isle-legacy-of-the-bretons_002.png" alt="">
+                    <img class="logo" src="./Images/herologo-the-elder-scrolls-online-high-isle-legacy-of-the-bretons_002.png" alt="">
                     <h3>A brand-new Elder Scrolls adventure</h3>
                     <p>Behold majestic castles, tournament fields & a valiant knightly culture in ESO: High Isle - coming to PS4 & PS5 this June.</p>
-                    <a href="#" class="button">Pre-order now</a>
+                    <a href="#" class="button orange">Pre-order now</a>
                 </div>
             </div>
 
             <div class="carousel-cell covers">
-                <img src="./Images/hero-mob-ps5-console-covers.jpg" alt="">
+                <div class="image-container">
+                    <img src="./Images/hero-mob-ps5-console-covers.jpg" alt="">
+                    <div class="imageOverlay"></div>
+                </div>
+                
                 <div class="description">
                     <h3>PS5 Console Covers now available</h3>
                     <p>Explore gaming frontiers with new covers for your PS5 console*</p>
-                    <a href="#" class="button">Buy now</a>
+                    <a href="#" class="button orange">Buy now</a>
                 </div>
             </div>
 
         </div>
         
         <div class="carousel carousel-nav"
-            data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false }'>
+            data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false, "wrapAround": true }'>
 
             <div class="carousel-cell">
                 <img src="./Images/navfor-uncharted-legacy-800x448.jpg" alt="">

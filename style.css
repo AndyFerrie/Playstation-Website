@@ -70,10 +70,6 @@ html {
 	font-size: 16px;
 }
 
-body { 
-    overflow: hidden;
-} 
-
 .image-container {
     overflow: hidden;
 }
@@ -97,14 +93,35 @@ img {
     color: white;
     text-decoration: none;
     border-radius: 20px;
-    padding: 10px 32px;
+    padding: 10px 24px;
     display: inline-block;
+    font-family: 'sst';
+    font-weight: 600;
+}
+
+.button.white {
+    background-color: white;
+    color: black;
+}
+
+.button.white:hover {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+.button.orange {
+    background-color: #cd3d0f;
+    color: white;
+}
+
+.button.orange:hover {
+    outline: 2px solid #cd3d0f;
+    outline-offset: 3px;
 }
 
 .button:hover {
-    background-color: white;
-    color: #0072ce;
-    transition: all 0.2s ease-in-out;
+    outline: 2px solid #0072ce;
+    outline-offset: 2px;
 }
 
 /* Navigation */
@@ -429,46 +446,147 @@ button#siteDropdown i.fa-chevron-down {
 section.hero {
     top: 60px;
     height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: #1f1f1f;
+}
+
+section.hero h3 {
+    margin: 24px 0px;
+}
+
+section.hero .button {
+    margin: 36px 0px;
+}
+
+section.hero .carousel-nav {
     position: relative;
 }
 
 section.hero .carousel-cell {
     width: 100%;
-    height: 80vh;
+    background-color: #1f1f1f;
+    overflow: hidden;
 }
 
-section.hero .carousel-cell.description {
-    position: absolute;
+section.hero .carousel-cell .description {
     width: 100%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2; 
+    font-family: 'sst light';
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.5s ease-out;
+}
+
+/* animation */
+
+section.hero .carousel-cell.is-selected .description {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 section.hero .carousel-main .carousel-cell img {
     height: 100vw;
+    opacity: 0;
+    transition: all 2s ease-in;
 }
 
-section.hero .carousel-main .carousel-cell video {
-    height: 100vw;
-    object-fit: cover;
+section.hero .carousel-main .carousel-cell.is-selected img {
+    opacity: 1;
 }
-    
-section.hero .carousel-nav .carousel-cell {
-    height: 20vh;
-    width: 100px;
-  }
 
 section.hero .carousel-cell.endofyear {
     background-color: #003a9c;
 }
 
-section.hero .carousel-cell.dualsense, section.hero .carousel-cell.GT7, section.hero .carousel-cell.elderscrolls, section.hero .carousel-cell.covers {
+section.hero .carousel-cell.uncharted, section.hero .carousel-cell.dualsense, section.hero .carousel-cell.GT7, section.hero .carousel-cell.elderscrolls, section.hero .carousel-cell.covers {
     background-color: #1f1f1f;
 }
 
+section.hero .carousel-cell.endofyear .description {
+    margin-top: -5%;
+}
+
+section.hero .carousel-cell.covers .description {
+    margin-top: -7%;
+}
+
+section.hero .carousel-cell.dualsense .description {
+    margin-top: -9%;
+}
+
+section.hero .carousel-cell.uncharted .description {
+    margin-top: -31%;
+}
+
+section.hero .carousel-cell.GT7 .description {
+    margin-top: -53%;
+}
+
+section.hero .carousel-cell.elderscrolls .description {
+    margin-top: -41%;
+}
+
+section.hero .carousel-main .carousel-cell .imageOverlay {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 50vw;
+    margin-top: 50vw;
+    width: 100%;
+    background: linear-gradient(rgba(31,31,31,0), #1f1f1f);
+}
+
+section.hero .carousel-main .carousel-cell img.logo {
+    height: 100%;
+    width: 75%; 
+}
+
+section.hero .carousel-main .carousel-cell h3 {
+    font-size: 20px;
+    font-weight: 300;
+    width: 80%;
+    text-align: center;
+}
+
+section.hero .carousel-main .carousel-cell p {
+    width: 85%;
+    text-align: center;
+    font-size: 15px;
+}
+
+section.hero .carousel-main .carousel-cell video {
+    height: 100vw;
+    object-fit: cover;
+    margin-bottom: -1%;
+}
+
+section.hero .carousel-nav {
+    background-color: white;
+    height: 70%;
+}
+    
+section.hero .carousel-nav .carousel-cell {
+    width: 50%;
+    padding: 10% 2% 10%;
+    background-color: white;
+  }
+
+section.hero .carousel-nav .carousel-cell img {
+    border-radius: 15px;
+    opacity: 0.5;
+}
+
+section.hero .carousel-nav .carousel-cell.is-nav-selected img {
+    opacity: 1;
+    outline: 2px solid #0574ce;
+    outline-offset: 3px;
+}
 
 
 
