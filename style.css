@@ -446,9 +446,15 @@ button#siteDropdown i.fa-chevron-down {
 section.hero {
     top: 60px;
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
     position: relative;
     background-color: #1f1f1f;
+}
+
+section.hero::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 section.hero h3 {
@@ -461,6 +467,12 @@ section.hero .button {
 
 section.hero .carousel-nav {
     position: relative;
+}
+
+section.hero .carousel-main::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 section.hero .carousel-cell {
@@ -481,6 +493,7 @@ section.hero .carousel-cell .description {
     opacity: 0;
     transform: translateY(30px);
     transition: all 1.5s ease-out;
+    float: left;
 }
 
 section.hero .carousel-cell .description::after {
@@ -606,8 +619,7 @@ section.hero .carousel-nav .carousel-cell.is-nav-selected img {
 /* Section 2 This Month on Playstation */
 
 section.thismonth {
-    margin-top: 15%;
-    position: relative;
+    margin-top: 60px;
 }
 
 /* Footer */

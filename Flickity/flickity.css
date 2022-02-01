@@ -10,10 +10,10 @@ https://flickity.metafizzy.co
 
 .flickity-viewport {
   position: relative;
+  overflow: auto;
 }
 
 .flickity-slider {
-  width: 100%;
 }
 
 /* draggable */
