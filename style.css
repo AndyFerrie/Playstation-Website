@@ -135,6 +135,8 @@ nav .mobile {
     position: fixed;
     background-color: #FFF;
     width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 nav button.menu {
@@ -447,15 +449,14 @@ section.hero {
     top: 60px;
     height: 100%;
     overflow: auto;
-    position: relative;
     background-color: #1f1f1f;
 }
 
-section.hero::after {
+/* section.hero::after { 
     content: "";
     clear: both;
     display: table;
-}
+} */
 
 section.hero h3 {
     margin: 24px 0px;
@@ -465,15 +466,15 @@ section.hero .button {
     margin: 36px 0px;
 }
 
-section.hero .carousel-nav {
+/* section.hero .carousel-nav { 
     position: relative;
-}
+} */
 
-section.hero .carousel-main::after {
+/* section.hero .carousel-main::after { 
     content: "";
     clear: both;
     display: table;
-}
+} */
 
 section.hero .carousel-cell {
     width: 100%;
@@ -617,10 +618,6 @@ section.hero .carousel-nav .carousel-cell.is-nav-selected img {
 }
 
 /* Section 2 This Month on Playstation */
-
-section.thismonth {
-    margin-top: 60px;
-}
 
 /* Footer */
 
