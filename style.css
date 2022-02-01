@@ -99,6 +99,11 @@ img {
     font-weight: 600;
 }
 
+.button:hover {
+    outline: 2px solid #0072ce;
+    outline-offset: 2px;
+}
+
 .button.white {
     background-color: #FFF;
     color: #000;
@@ -119,10 +124,7 @@ img {
     outline-offset: 3px;
 }
 
-.button:hover {
-    outline: 2px solid #0072ce;
-    outline-offset: 2px;
-}
+
 
 /* Navigation */
 
@@ -135,8 +137,7 @@ nav .mobile {
     position: fixed;
     background-color: #FFF;
     width: 100%;
-    position: relative;
-    overflow: hidden;
+    /* position: relative; */
 }
 
 nav button.menu {
@@ -448,15 +449,10 @@ button#siteDropdown i.fa-chevron-down {
 section.hero {
     top: 60px;
     height: 100%;
-    overflow: auto;
     background-color: #1f1f1f;
+     padding-top: 60px;  /* This stops overflow */
+    /* position: relative; */
 }
-
-/* section.hero::after { 
-    content: "";
-    clear: both;
-    display: table;
-} */
 
 section.hero h3 {
     margin: 24px 0px;
@@ -465,16 +461,6 @@ section.hero h3 {
 section.hero .button {
     margin: 36px 0px;
 }
-
-/* section.hero .carousel-nav { 
-    position: relative;
-} */
-
-/* section.hero .carousel-main::after { 
-    content: "";
-    clear: both;
-    display: table;
-} */
 
 section.hero .carousel-cell {
     width: 100%;
