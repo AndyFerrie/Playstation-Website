@@ -1,77 +1,139 @@
-function menuDropdown() {
-    document.getElementById("menuDropdown").classList.toggle('display');
-    document.getElementById("menuDropBtn").classList.toggle('cross');
+function display (el) {
+    el.classList.toggle('display');
 }
+
+function removeDisplay (el) {
+    el.classList.remove('display');
+}
+
+function slidein (el) {
+    el.classList.toggle('slidein');
+}
+
+function removeSlidein (el) {
+    el.classList.remove('slidein');
+}
+
+// Hamburger menu icon
+
+const menuDropdown = document.getElementById("menuDropdown");
+const menuDropBtn = document.getElementById("menuDropBtn");
+
+function hamburgerMenu() {
+    display(menuDropdown);
+    menuDropBtn.classList.toggle('cross');
+}
+
+menuDropBtn.addEventListener("click", hamburgerMenu);
+menuDropBtn.addEventListener("click", sideMenusOff);
+
+// Dropdown menu
+
+const gamesMenu = document.getElementById("gamesMenu");
+const hardwareMenu = document.getElementById("hardwareMenu");
+const servicesMenu = document.getElementById("servicesMenu");
+const newsMenu = document.getElementById("newsMenu");
+const shopMenu = document.getElementById("shopMenu");
+const supportMenu = document.getElementById("supportMenu");
+
+// Dropdown menu icons
+
+const gamesIconActive = document.getElementById("gamesIconActive");
+const hardwareIconActive = document.getElementById("hardwareIconActive");
+const servicesIconActive = document.getElementById("servicesIconActive");
+const newsIconActive = document.getElementById("newsIconActive");
+const shopIconActive = document.getElementById("shopIconActive");
+const supportIconActive = document.getElementById("supportIconActive");
 
 function gamesSideMenu() {
     sideMenusOff();
-    document.getElementById("gamesMenu").classList.toggle('slidein');
-    document.getElementById("gamesIconActive").classList.toggle('display');
+    slidein(gamesMenu);
+    display(gamesIconActive);
 }
 
 function hardwareSideMenu() {
     sideMenusOff();
-    document.getElementById("hardwareMenu").classList.toggle('slidein');
-    document.getElementById("hardwareIconActive").classList.toggle('display');
+    slidein(hardwareMenu);
+    display(hardwareIconActive);
 }
 
 function servicesSideMenu() {
     sideMenusOff();
-    document.getElementById("servicesMenu").classList.toggle('slidein');
-    document.getElementById("servicesIconActive").classList.toggle('display');
+    slidein(servicesMenu);
+    display(servicesIconActive);
 }
 
 function newsSideMenu() {
     sideMenusOff();
-    document.getElementById("newsMenu").classList.toggle('slidein');
-    document.getElementById("newsIconActive").classList.toggle('display');
+    slidein(newsMenu);
+    display(newsIconActive);
 }
 
 function shopSideMenu() {
     sideMenusOff();
-    document.getElementById("shopMenu").classList.toggle('slidein');
-    document.getElementById("shopIconActive").classList.toggle('display');
+    slidein(shopMenu);
+    display(shopIconActive);
 }
 
 function supportSideMenu() {
     sideMenusOff();
-    document.getElementById("supportMenu").classList.toggle('slidein');
-    document.getElementById("supportIconActive").classList.toggle('display');
+    slidein(supportMenu);
+    display(supportIconActive);
 }
 
 function sideMenusOff() {
     activeIconsOff();
-    document.getElementById("gamesMenu").classList.remove('slidein');
-    document.getElementById("hardwareMenu").classList.remove('slidein');
-    document.getElementById("servicesMenu").classList.remove('slidein');
-    document.getElementById("newsMenu").classList.remove('slidein');
-    document.getElementById("shopMenu").classList.remove('slidein');
-    document.getElementById("supportMenu").classList.remove('slidein');
+    removeSlidein(gamesMenu);
+    removeSlidein(hardwareMenu);
+    removeSlidein(servicesMenu);
+    removeSlidein(newsMenu);
+    removeSlidein(shopMenu);
+    removeSlidein(supportMenu); 
 }
 
 function activeIconsOff() {
-    document.getElementById("gamesIconActive").classList.remove('display');
-    document.getElementById("hardwareIconActive").classList.remove('display');
-    document.getElementById("servicesIconActive").classList.remove('display');
-    document.getElementById("newsIconActive").classList.remove('display');
-    document.getElementById("shopIconActive").classList.remove('display');
-    document.getElementById("supportIconActive").classList.remove('display');
+    removeDisplay(gamesIconActive);
+    removeDisplay(hardwareIconActive);
+    removeDisplay(servicesIconActive);
+    removeDisplay(newsIconActive);
+    removeDisplay(shopIconActive);
+    removeDisplay(supportIconActive);
 }
 
-function searchDropdown() {
-    document.getElementById("searchDropdown").classList.toggle('show');
+games.addEventListener("click", gamesSideMenu);
+hardware.addEventListener("click", hardwareSideMenu);
+services.addEventListener("click", servicesSideMenu);
+news.addEventListener("click", newsSideMenu);
+shop.addEventListener("click", shopSideMenu);
+support.addEventListener("click", supportSideMenu);
+
+document.getElementById("gamesMenuTitle").addEventListener("click", sideMenusOff);
+document.getElementById("hardwareMenuTitle").addEventListener("click", sideMenusOff);
+document.getElementById("servicesMenuTitle").addEventListener("click", sideMenusOff);
+document.getElementById("newsMenuTitle").addEventListener("click", sideMenusOff);
+document.getElementById("shopMenuTitle").addEventListener("click", sideMenusOff);
+document.getElementById("supportMenuTitle").addEventListener("click", sideMenusOff);
+
+// Site search dropdown & overlay
+
+const searchDropdown = document.getElementById("searchDropdown");
+const overlay = document.getElementById("overlay");
+const siteDropdown = document.getElementById("siteDropdown");
+
+function searchDropdownMenu() {
+    searchDropdown.classList.toggle('show');
 }
 
-function overlay() {
-    document.getElementById("overlay").classList.toggle('onoff');
+function displayOverlay() {
+    display(overlay);
 }
 
-function siteDropdown() {
-    document.getElementById("siteDropdown").classList.toggle('display');
+function siteSelector() {
+    display(siteDropdown);
 }
 
-function siteDropdownOff() {
-    document.getElementById("siteDropdown").classList.remove('display');
+function siteSelectorOff() {
+    removeDisplay(siteDropdown);
 }
 
 function siteFocusCom() {
@@ -86,40 +148,23 @@ function siteFocusStore() {
     document.getElementById("searchField").placeholder = "Search PS Store";
 }
 
-document.getElementById("menuDropBtn").addEventListener("click", menuDropdown);
-document.getElementById("menuDropBtn").addEventListener("click", sideMenusOff)
+document.getElementById("searchDropBtn").addEventListener("click", searchDropdownMenu);
+document.getElementById("searchDropBtn").addEventListener("click", displayOverlay);
 
-document.getElementById("games").addEventListener("click", gamesSideMenu);
-document.getElementById("hardware").addEventListener("click", hardwareSideMenu);
-document.getElementById("services").addEventListener("click", servicesSideMenu);
-document.getElementById("news").addEventListener("click", newsSideMenu);
-document.getElementById("shop").addEventListener("click", shopSideMenu);
-document.getElementById("support").addEventListener("click", supportSideMenu);
+document.getElementById("searchBackBtn").addEventListener("click", searchDropdownMenu);
+document.getElementById("searchBackBtn").addEventListener("click", displayOverlay);
+document.getElementById("searchBackBtn").addEventListener("click", siteSelectorOff);
 
-document.getElementById("gamesMenuTitle").addEventListener("click", sideMenusOff);
-document.getElementById("hardwareMenuTitle").addEventListener("click", sideMenusOff);
-document.getElementById("servicesMenuTitle").addEventListener("click", sideMenusOff);
-document.getElementById("newsMenuTitle").addEventListener("click", sideMenusOff);
-document.getElementById("shopMenuTitle").addEventListener("click", sideMenusOff);
-document.getElementById("supportMenuTitle").addEventListener("click", sideMenusOff);
+document.getElementById("siteDropBtn").addEventListener("click", siteSelector);
 
-document.getElementById("searchDropBtn").addEventListener("click", searchDropdown);
-document.getElementById("searchDropBtn").addEventListener("click", overlay);
+document.getElementById("siteBackBtn").addEventListener("click", siteSelector);
 
-document.getElementById("searchBackBtn").addEventListener("click", searchDropdown);
-document.getElementById("searchBackBtn").addEventListener("click", overlay);
-document.getElementById("searchBackBtn").addEventListener("click", siteDropdownOff);
-
-document.getElementById("siteDropBtn").addEventListener("click", siteDropdown);
-
-document.getElementById("siteBackBtn").addEventListener("click", siteDropdown);
-
-document.getElementById("playStationCom").addEventListener("click", siteDropdown);
+document.getElementById("playStationCom").addEventListener("click", siteSelector);
 document.getElementById("playStationCom").addEventListener("click", siteFocusCom);
 
-document.getElementById("playStationStore").addEventListener("click", siteDropdown);
+document.getElementById("playStationStore").addEventListener("click", siteSelector);
 document.getElementById("playStationStore").addEventListener("click", siteFocusStore);
 
-document.getElementById("overlay").addEventListener("click", overlay);
-document.getElementById("overlay").addEventListener("click", searchDropdown);
-document.getElementById("overlay").addEventListener("click", siteDropdownOff);
+overlay.addEventListener("click", displayOverlay);
+overlay.addEventListener("click", searchDropdownMenu);
+overlay.addEventListener("click", siteSelectorOff);

@@ -197,12 +197,6 @@ nav .button {
     background: linear-gradient(0,rgba(0,0,0,0.5) 0,rgba(0,0,0,0.8) 43.07%,#000 100%);
 }
 
-/* switches overlay on/off */
-
-.onoff {
-    display: block;
-}
-
 .searchDropdown {
     top: -120px;
     position: absolute;
