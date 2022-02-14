@@ -6,11 +6,11 @@ function removeDisplay (el) {
     el.classList.remove('display');
 }
 
-function slidein (el) {
+function slidein(el) {
     el.classList.toggle('slidein');
 }
 
-function removeSlidein () {
+function removeSlidein() {
     var allElements = document.querySelectorAll(".slidein");
     for (i=0; i<allElements.length; i++) {
         allElements[i].classList.remove('slidein');
@@ -29,10 +29,14 @@ function sideMenusOff() {
     removeSlidein(); 
 }
 
+function getEl(id) {
+    return document.getElementById(id);
+}
+
 // Hamburger menu icon
 
-const menuDropdown = document.getElementById("menuDropdown");
-const menuDropBtn = document.getElementById("menuDropBtn");
+const menuDropdown = getEl("menuDropdown");
+const menuDropBtn = getEl("menuDropBtn");
 
 menuDropBtn.addEventListener("click", function hamburgerMenu() {
     display(menuDropdown);
@@ -42,21 +46,21 @@ menuDropBtn.addEventListener("click", function hamburgerMenu() {
 
 // Dropdown menu
 
-const gamesMenu = document.getElementById("gamesMenu");
-const hardwareMenu = document.getElementById("hardwareMenu");
-const servicesMenu = document.getElementById("servicesMenu");
-const newsMenu = document.getElementById("newsMenu");
-const shopMenu = document.getElementById("shopMenu");
-const supportMenu = document.getElementById("supportMenu");
+const gamesMenu = getEl("gamesMenu");
+const hardwareMenu = getEl("hardwareMenu");
+const servicesMenu = getEl("servicesMenu");
+const newsMenu = getEl("newsMenu");
+const shopMenu = getEl("shopMenu");
+const supportMenu = getEl("supportMenu");
 
 // Dropdown menu icons
 
-const gamesIconActive = document.getElementById("gamesIconActive");
-const hardwareIconActive = document.getElementById("hardwareIconActive");
-const servicesIconActive = document.getElementById("servicesIconActive");
-const newsIconActive = document.getElementById("newsIconActive");
-const shopIconActive = document.getElementById("shopIconActive");
-const supportIconActive = document.getElementById("supportIconActive");
+const gamesIconActive = getEl("gamesIconActive");
+const hardwareIconActive = getEl("hardwareIconActive");
+const servicesIconActive = getEl("servicesIconActive");
+const newsIconActive = getEl("newsIconActive");
+const shopIconActive = getEl("shopIconActive");
+const supportIconActive = getEl("supportIconActive");
 
 games.addEventListener("click", function gamesSideMenu() {
     sideMenusOff();
@@ -104,9 +108,9 @@ document.querySelectorAll('.title').forEach(item => {
 
 // Site search dropdown & overlay
 
-const searchDropdown = document.getElementById("searchDropdown");
-const overlay = document.getElementById("overlay");
-const siteDropdown = document.getElementById("siteDropdown");
+const searchDropdown = getEl("searchDropdown");
+const overlay = getEl("overlay");
+const siteDropdown = getEl("siteDropdown");
 
 function searchDropdownMenu() {
     searchDropdown.classList.toggle('show');
@@ -122,9 +126,9 @@ function siteSelectorOff() {
     removeDisplay(siteDropdown);
 }
 
-const playStationCom = document.getElementById("playStationCom");
-const playStationStore = document.getElementById("playStationStore");
-const searchField = document.getElementById("searchField");
+const playStationCom = getEl("playStationCom");
+const playStationStore = getEl("playStationStore");
+const searchField = getEl("searchField");
 
 playStationCom.addEventListener("click", function siteFocusCom() {
     siteSelector();
@@ -140,9 +144,9 @@ playStationStore.addEventListener("click", function siteFocusStore() {
     searchField.placeholder = "Search PS Store";
 })
 
-document.getElementById("searchDropBtn").addEventListener("click", searchDropdownMenu);
-document.getElementById("searchBackBtn").addEventListener("click", searchDropdownMenu);
-document.getElementById("siteDropBtn").addEventListener("click", siteSelector);
-document.getElementById("siteBackBtn").addEventListener("click", siteSelector);
+getEl("searchDropBtn").addEventListener("click", searchDropdownMenu);
+getEl("searchBackBtn").addEventListener("click", searchDropdownMenu);
+getEl("siteDropBtn").addEventListener("click", siteSelector);
+getEl("siteBackBtn").addEventListener("click", siteSelector);
 
 overlay.addEventListener("click", searchDropdownMenu);
